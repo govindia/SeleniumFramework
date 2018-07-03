@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -46,9 +48,9 @@ public class ConfigTest {
 	}
 	
 	
-	@Parameters({"appURL","browserName","dbHost","dbUsername","dbEncryptedPassword"})
+	@Parameters({"appURL","browserName"/*,"dbHost","dbUsername","dbEncryptedPassword"*/ })
 	@BeforeClass
-	public void setup(String strAppURL, String strBrowser, String dbHost, String dbUsername, String dbEncryptedPassword){
+	public void setup(String strAppURL, String strBrowser /*, String dbHost, String dbUsername, String dbEncryptedPassword*/){
 
 		if(strBrowser.equalsIgnoreCase("chrome")){
 
@@ -103,13 +105,11 @@ public class ConfigTest {
 		
 */
 	}
-	
 
 	@BeforeMethod
 	public void waitBeforeEveryMethod() throws InterruptedException{
-
-		//driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		Thread.sleep(3000);
+		ConfigTest.driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		//Thread.sleep(3000);
 	}
 
 

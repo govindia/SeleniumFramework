@@ -1,6 +1,7 @@
-package appication.utilities;
+/*package appication.utilities;
 
 import java.io.IOException;
+
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -16,7 +17,7 @@ import org.testng.annotations.ITestAnnotation;
 import org.testng.xml.XmlSuite;
 
 
-public class ListenerClass implements ITestListener, ISuiteListener /*, IAnnotationTransformer, IAlterSuiteListener */ {
+public class ListenerClass implements ITestListener, ISuiteListener , IAnnotationTransformer, IAlterSuiteListener  {
 	
 	CommonLib objCommonLib = new CommonLib();
 
@@ -74,7 +75,7 @@ public class ListenerClass implements ITestListener, ISuiteListener /*, IAnnotat
 		System.out.println("The Test Suite execution Begins");
 	}
 
-/*
+
 	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
 		// TODO Auto-generated method stub
 		
@@ -103,7 +104,8 @@ public class ListenerClass implements ITestListener, ISuiteListener /*, IAnnotat
 			e.printStackTrace();			
 		}
 	}
-	*/
+	
 
 
 }
+*/
